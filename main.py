@@ -73,6 +73,8 @@ def is_sorted(arr: List[T]) -> bool:
     :returns: True if the list is sorted
     '''
     size = len(arr) # size of array
+    if size <= 1: # size is 0 or 1
+        return True # with 0 or 1 element there is no order
     print('sorted:', arr) # show array
     for i in range(size - 1): # iterate from 0 to size - 2
         if arr[i + 1] < arr[i]: # if the second term is less than the first term
